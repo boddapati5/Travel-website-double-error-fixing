@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel and Tourism</title>
+    <style>
+        body.light-mode {
+            background-color: #fff;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: #333;
+            color: #f4f4f4;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        #themeToggle {
+            cursor: pointer;
+            padding: 5px 10px;
+            background: #007BFF; /* Brighter blue for better contrast */
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body class="light-mode">
+    <header>
+        <div class="logo">GlobeTrotter</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Travel Guides</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="themeToggle" style="color: rgb(255, 255, 255); background-color: rgb(0, 123, 255);">Dark Mode</button>
+    </header>
+
+    <!-- Further content goes here (e.g., Hero section, Destinations, etc.) -->
+
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            const bodyClass = document.body.classList;
+            const themeButton = document.getElementById('themeToggle');
+            bodyClass.toggle('dark-mode');
+            if (bodyClass.contains('dark-mode')) {
+                themeButton.textContent = 'Light Mode';
+            } else {
+                themeButton.textContent = 'Dark Mode';
+            }
+        });
+    </script>
+</body>
+</html>
